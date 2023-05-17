@@ -1,7 +1,6 @@
 ### POST /api/login ###
 POST http://localhost:8080/api/login
 Content-Type: application/x-www-form-urlencoded
-Authorization: Bearer your-token-value
 
 username=test&password=test
 
@@ -9,7 +8,7 @@ username=test&password=test
 ### POST /api/employees ###
 POST http://localhost:8080/api/employees
 Content-Type: application/json
-Authorization: Bearer your-token-value
+Authorization: your-token-value
 
 {
   "id": "2",
@@ -21,19 +20,19 @@ Authorization: Bearer your-token-value
 ### GET /api/employees ###
 GET http://localhost:8080/api/employees
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQ0MTQwODMsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoidGVzdCJ9.S0jv9pJs2sjUDA_Ja_3kggnKogM2g_-TygIaBMLOKTs
+Authorization: your-token-value
 
 {}
 
 ### GET /api/employees/{id} ###
-GET http://localhost:8080/api/employees/bc036eb5-6bc5-47e2-bdf7-8734a92412f6
+GET http://localhost:8080/api/employees/{id}
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQ0MTQwODMsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoidGVzdCJ9.S0jv9pJs2sjUDA_Ja_3kggnKogM2g_-TygIaBMLOKTs
+Authorization: your-token-value
 
 ### PUT /api/employees/{id} ###
-PUT http://localhost:8080/api/employees/bc036eb5-6bc5-47e2-bdf7-8734a92412f6
+PUT http://localhost:8080/api/employees/{id}
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQ0MTQwODMsInJvbGUiOiJhZG1pbiIsInVzZXJuYW1lIjoidGVzdCJ9.S0jv9pJs2sjUDA_Ja_3kggnKogM2g_-TygIaBMLOKTs
+Authorization: your-token-value
 
 {
   "id": "bc036eb5-6bc5-47e2-bdf7-8734a92412f6",
@@ -43,6 +42,6 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODQ0MTQwODMsInJv
 }
 
 ### DELETE /api/employees/{id} ###
-DELETE http://localhost:8080/api/employees/1f53c729-ccea-4400-84ac-ba6a48f1671c
+DELETE http://localhost:8080/api/employees/{id}
 Content-Type: application/json
 Authorization: Bearer your-token-value
